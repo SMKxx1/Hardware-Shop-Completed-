@@ -1,0 +1,179 @@
+CRTEATING TABLES AND INSERTING VALUES
+
+cabinet
+CREATE TABLE `cabinet` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `size` varchar(45) DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO cabinet VALUES
+('1', 'Antec', 'VSK3000', 'Micro-Atx', '2045'),
+('2', 'Antec', 'NX100', 'Mid Tower', '2415'),
+('3', 'Deepcool', 'D-SHIELD V2', 'Mid Tower', '2725'),
+('4', 'Corsair', 'Carbide 100R', 'Mid Tower', '2825'),
+('5', 'Deepcool', 'Dukase WHV3', 'Mid Tower', '5125'),
+('6', 'Thermaltake', 'H200 TG Snow RGB', 'Mid Tower', '5265'),
+('7', 'Antec', 'NX800', 'Mid Tower', '6445'),
+('8', 'NZXT', 'H400', 'Mid Tower', '7788'),
+('9', 'Thermaltake', 'View 91 RGB', 'Super Tower', '37610'),
+('10', 'Deepcool', 'Quadstellar', 'Full Tower', '38940'),
+('11', 'Corsair', 'Obsidian 1000D', 'Super Tower', '41325'),
+('12', 'Thermaltake', 'Level 20', 'Full Tower', '80890');
+
+graphics_card
+CREATE TABLE `graphics_card` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `vram` varchar(45) DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO graphics_card VALUES
+('1', 'Zotac', 'GTX 1050 Ti OC', '4GB', '10045'),
+('2', 'Sapphir Pulse', 'RX 580', '8GB', '16320'),
+('3', 'Inno3D', 'GTX 1660 Super', '6GB', '20500'),
+('4', 'Asus', 'GTX 1660 Super OC', '6GB', '23720'),
+('5', 'MSI', 'RTX 2060 Super', '8GB', '35695'),
+('6', 'Gigabyte', 'RTX 2060 Super', '8GB', '36470'),
+('7', 'Asus', 'RTX 2070 Super', '8GB', '52500'),
+('8', 'Asus', 'RTX 2080 Super', '8GB', '70135'),
+('9', 'MSI', 'RTX 2080 Ti', '11GB', '90545'),
+('10', 'Asus', 'RTX 2080 Ti OC', '11GB', '121455'),
+('11', 'Nvidia', 'Quadro RTX 5000', '16GB', '137815'),
+('12', 'Nvidia', 'Quadro RTX 6000', '24GB', '290595'),
+('13', 'Nvidia', 'Quadro RTX 8000', '48GB', '407735');
+
+motherboards
+CREATE TABLE `motherboards` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `chipset` varchar(45) DEFAULT NULL,
+  `ram_sloths` int(11) DEFAULT NULL,
+  `size` varchar(45) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO motherboards VALUES
+('1', 'Asus', 'EX-A320M', 'AM4', '4', 'Micro ATX', '4935'),
+('2', 'Asus', 'EX-B365M', 'LGA 1151', '2', 'Micro ATX', '5900'),
+('3', 'MSI', 'B365M', 'LGA 1151', '2', 'Micro Atx', '5900'),
+('4', 'Asrock', 'B365M', 'LGA 1151', '4', 'ATX', '7140'),
+('5', 'Asrock', 'B450M', 'AM4', '4', 'Micro ATX', '7220'),
+('6', 'Asrock', 'B450', 'AM4', '4', 'ATX', '7825'),
+('7', 'Asus', 'TUF-B450', 'AM4', '4', 'ATX', '8395'),
+('8', 'Asus', 'ROG STRIX-B450-F', 'AM4', '4', 'ATX', '10895'),
+('9', 'Asus', 'ROG STRIX-B365-F', 'LGA 1151', '4', 'ATX', '11955'),
+('10', 'Asus', 'Prime TRX-40-Pro', 'sTRX4', '8', 'ATX', '39465'),
+('11', 'Asus', 'ROG STRIX TRX40-E', 'sTRX4', '8', 'ATX', '43620'),
+('12', 'Asus', 'ROG Zenith II Extreme', 'sTRX4', '8', 'ATX', '62310');
+
+powersupply
+CREATE TABLE `powersupply` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `wattage` int(11) DEFAULT NULL,
+  `modularity` varchar(45) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO powersupply VALUES
+('1', 'Thermaltake', 'Litepower', '450', 'Non-Modular', '2275'),
+('2', 'Corsair', 'VS450', '450', 'Non-Modular', '2795'),
+('3', 'Thermaltake', 'TR2 S', '500', 'Non-Modular', '3055'),
+('4', 'Thermaltake', 'Smart RGB', '600', 'Non-Modular', '4705'),
+('5', 'Corsair', 'CS', '450', 'Semi-Modular', '5225'),
+('6', 'Corsair', 'CX', '650', 'Non-Modular', '5475'),
+('7', 'Corsair', 'CX', '850', 'Semi-Modular', '8935'),
+('8', 'Corsair', 'RM', '1000', 'Modular', '13125'),
+('9', 'Thermaltake', 'Toughpower', '1200', 'Modular', '18680'),
+('10', 'Corsair', 'AX', '1600', 'Modular', '39330');
+
+processor
+CREATE TABLE `processor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(10) DEFAULT 'INTEL',
+  `name` varchar(45) DEFAULT NULL,
+  `chipset` varchar(45) DEFAULT NULL,
+  `speed` varchar(45) DEFAULT NULL,
+  `no_of_cores` varchar(45) DEFAULT NULL,
+  `no_of_threads` varchar(45) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO processor VALUES
+('1', 'Intel', 'Pentium Gold', 'LGA 1151', '3.7 GHz', '2', '2', '5055'),
+('2', 'AMD', 'Ryzen 3 2200G with Vega 8', 'AM4', '3.5 GHz', '4', '4', '6620'),
+('3', 'Intel', 'i3-9100F', 'LGA 1151', '3.6 GHz', '4', '4', '7100'),
+('4', 'AMD', 'Ryzen 3 3200G with Vega 8', 'AM4', '4.0 GHz', '4', '4', '8210'),
+('5', 'AMD', 'Ryzen 5 3400G with RX Vega 11', 'AM4', '3.7 GHz', '4', '4', '12740'),
+('6', 'Intel', 'i5-9400', 'LGA 1151', '2.9 GHz', '6', '6', '15810'),
+('7', 'AMD', 'Ryzen 7 2700X', 'LGA 1151', '3.7 GHz', '8', '8', '20490'),
+('8', 'Intel', 'i7 9700', 'LGA 1151', '3.0 GHz', '8', '8', '29490'),
+('9', 'AMD', 'Ryzen 7 3800X', 'AM4', '3.9 GHz', '8', '8', '30380'),
+('10', 'Intel', 'i9 9900k', 'LGA 1151', '5.00 GHz', '8', '16', '56810'),
+('11', 'AMD', 'Ryzen Threadripper 3970X', 'sTRX4', '4.5 GHz', '32', '64', '176899');
+
+ram
+CREATE TABLE `ram` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `memory` varchar(45) DEFAULT NULL,
+  `no_of_units` varchar(10) DEFAULT NULL,
+  `speed` varchar(45) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO ram VALUES
+('1', 'Corsair', 'Vengence LPX', '8 GB', '1', '3000 MHz', '3290'),
+('2', 'G.skill', 'Ripjaws', '8 GB', '1', '2400 MHz', '3765'),
+('3', 'G.skill', 'Trident Z RGB', '8 GB', '1', '3000 MHz', '4275'),
+('4', 'Corsair', 'Vengence RGB', '8 GB', '1', '3000 MHz', '4680'),
+('5', 'Adata', 'XPG Spectrix D41', '8 GB', '1', '3000 MHz', '4815'),
+('6', 'Corsair', 'Vengence RGB', '16 GB', '1', '3000 MHz', '7170'),
+('7', 'G.skill', 'Ripjaws', '8 GB', '2', '3600 MHz', '7220'),
+('8', 'G.skill', 'Trident TOUGHRAM RGB', '8 GB', '2', '3000 MHz', '8700'),
+('9', 'G.skill', 'Trident Z Neo', '8 GB', '2', '3000 MHz', '9605'),
+('10', 'G.skill', 'Trident Z RGB', '16 GB', '2', '3200 MHz', '20945');
+
+storage
+CREATE TABLE `storage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `type` varchar(45) DEFAULT NULL,
+  `capacity` varchar(45) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+INSERT INTO storage VALUES
+('1', 'Western Digital', 'Green', 'SSD', '120 GB', '1735'),
+('2', 'Western Digital', 'Blue', 'HDD', '1 TB', '2825'),
+('3', 'Seagate', 'Barracuda', 'HDD', '1 TB', '2965'),
+('4', 'Crucial', 'MX500', 'SSD', '250 GB', '3285'),
+('5', 'Samsung', '860 EVO', 'M.2', '250 GB', '4285'),
+('6', 'Western Digital', 'Blue', 'HDD', '2 TB', '4355'),
+('7', 'Western Digital', 'Purple', 'HDD', '3 TB', '6870'),
+('8', 'Western DIgital', 'Green', 'SSD', '1 TB', '9415'),
+('9', 'Samsung', '970 Pro NVMe', 'M.2', '512 GB', '12975'),
+('10', 'Intel', '660p NVMe', 'M.2', '2 TB', '17330'),
+('11', 'Seagate', 'Barracuda', 'HDD', '8 TB', '26385'),
+('12', 'Western Digital', 'Red Pro', 'HDD', '10 TB', '33135'),
+('13', 'Western Digital', 'Black NVMe', 'M.2', '2 TB', '40885'),
+('14', 'Western Digital', 'Ultrastar 512e', 'HDD', '14 TB', '41725');
+
+purchases
+CREATE TABLE `purchases` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `tax` int(11) DEFAULT NULL,
+  `amount` int(11) DEFAULT NULL,
+  `total_amount` int(11) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  PRIMARY KEY (`id`));

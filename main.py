@@ -140,7 +140,7 @@ def main():
     clear()
     display = pandas.read_sql(f"select * from powersupply;", conn)
     print(tabulate(display,
-                   headers=['No','Brand','Name','Watts','Modularity''Price'],
+                   headers=['No','Brand','Name','Watts','Modularity','Price'],
                    tablefmt="fancy_grid",
                    showindex=False))
     opt = int(input("Enter the PSU no: "))
@@ -196,13 +196,13 @@ def main():
                        tablefmt='grid',
                        numalign='right'))
         print("Purchase Completed!!!")
+        input()
 
 def purchase(tax, price, final_price):
     cdate = datetime.date.today()
     name = input("Please enter your full name: ")
     c.execute(f"INSERT INTO purchases VALUES(NULL, '{name}', {tax}, {price}, {final_price}, '{cdate}');")
     conn.commit()
-    input()
     clear()
 
 main()
